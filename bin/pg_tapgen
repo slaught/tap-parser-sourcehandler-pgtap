@@ -176,7 +176,7 @@ sub tables_are {
     }
 
     for my $table (@{ $tables }) {
-        # script { has_table($schema, $table) } "table_$schema.$table.sql";
+        script { has_table($schema, $table) } "table_$schema.$table.sql";
     }
 }
 
