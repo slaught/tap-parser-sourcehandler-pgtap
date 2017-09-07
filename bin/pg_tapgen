@@ -341,9 +341,8 @@ sub columns_are {
         $total_tests = $total_tests + 4;
         if ($col->[3] ) {
            my $col_def = $col->[4] ;
-           $col_def =~ s/'/''/g ;
         # indenting wierd to keep print lined up
-        print "SELECT col_default_is(   '$schema', '$table', '$col->[0]', '$col_def','$description default is');\n";
+        print "SELECT col_default_is(   '$schema', '$table', '$col->[0]', $col_def,'$description default is');\n";
           $total_tests++ ;
         }
         print $/;
